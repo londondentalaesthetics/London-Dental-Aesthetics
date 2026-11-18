@@ -333,7 +333,7 @@ function foot(){$("#foot").innerHTML=`<div class="fg"><div><img src="${B.logo}" 
 <div><h4>Quick Links</h4><ul><li><a href="#/">Home</a></li><li><a href="#/about">About Us</a></li><li><a href="#/services">Services</a></li><li><a href="#/gallery">Gallery</a></li><li><a href="#/blog">Blog</a></li><li><a href="#/contact">Contact</a></li></ul></div>
 <div><h4>Services</h4><ul>${S.map(s=>`<li><a href="#/services/${s.id}">${s.t}</a></li>`).join("")}</ul></div>
 <div><h4>Contact Information</h4><ul><li>Lahore: ${B.lhr}</li><li>Faisalabad: ${B.fsd}</li><li><a href="tel:${B.tel}">${B.phone}</a></li><li><a href="mailto:${B.email}">${B.email}</a></li><li>${B.hours}</li></ul></div></div>
-<div class="copy">© ${new Date().getFullYear()} ${Armada Marketing}. All rights reserved.</div>`}
+<div class="copy">© ${new Date().getFullYear()} ${B.name}. All rights reserved.</div>`}
 function route(){const h=location.hash.replace(/^#\/?/,"").split("/");let v;
  if(h[0]=="services"&&h[1]&&S.some(x=>x.id==h[1]))v=pages.service(h[1]);
  else if(h[0]=="areas"&&h[1]&&AREAS.some(x=>x.id==h[1]))v=pages.area(h[1]);
